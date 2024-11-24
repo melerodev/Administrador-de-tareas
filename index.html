@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrador de Tareas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/index.js" defer></script>
+</head>
+<body>
+    <audio id="sonido" src="/assets/sounds/click.ogg"></audio>
+    <div class="menu-botones">
+        <button id="boton-anadir-tarea-menu" class="botones"><i class="fa-solid fa-plus"></i>&nbsp;Añadir</button>
+    </div>
+    <hr id="cero-margin-hr">
+    <div>
+        <form id="formulario">
+            <label for="buscador-tareas" id="mensaje-escritura">✏️Administrador de tareas📓</label>
+            <input id="buscador-tareas" type="text" placeholder="Introduce el nombre de la tarea a buscar">
+        </form>
+    </div>
+    <div id="modal-tarea" class="modal">
+        <div id="contenido-modal">
+            <span id="boton-cerrar">&times;</span>
+            <h2>Añadir Tarea</h2>
+            <label for="titulo-tarea">Título:</label>
+            <input type="text" id="titulo-tarea" placeholder="Título de la tarea">
+            <label for="descripcion-tarea">Descripción:</label>
+            <textarea id="descripcion-tarea" placeholder="Descripción de la tarea"></textarea>
+            <label for="fecha-vencimiento-tarea">Fecha de vencimiento:</label>
+            <input type="date" id="fecha-vencimiento-tarea">
+            <button id="boton-anadir-tarea" class="botones">Añadir Tarea</button>
+        </div>
+    </div>
+    <div id="contenedor-tareas">
+    </div>
+    <div id="c-sin-tareas">
+        <p id="texto-tarea-sin-tareas">🎉Actualmente no tienes ninguna tarea pendiente🎉</p>
+    </div>
+    <div id="c-tarea-no-encontrada">
+        <p id="texto-tarea-no-encontrada">🤷No se ha encontrado una tarea con ese título, descripción o fecha🤷</p>
+    </div>
+</body>
+</html>
